@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import MainDescription from "./view/main-description/MainDescription";
+import SideBar from "./view/side-bar/SideBar";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="Resume-app container">
+            <div className="row g-0">
+                <div className="col-4">
+                    <SideBar></SideBar>
+                </div>
+
+                <div className="col-8">
+                    <MainDescription></MainDescription>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
